@@ -16,8 +16,7 @@
 
 
     <div class="col-12 col-lg-8 mt-5 mt-lg-0">
-      <div v-if="users.length === 0">Loading ... </div>
-
+      <h3>Users List</h3>
       <table class="table">
         <thead>
           <tr>
@@ -39,6 +38,8 @@
           </tr>
         </tbody>
       </table>
+      <div v-if="users.length === 0">Loading ... </div>
+
 
     </div>
 
