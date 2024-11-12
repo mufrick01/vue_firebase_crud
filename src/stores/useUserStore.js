@@ -13,6 +13,8 @@ import firebaseApp from '@/firebase.config';
 
 export const useUserStore = defineStore('users', () => {
   const users = ref([]);
+  const userToEdit = ref();
+
   const getUsers = async () => {
     try {
       let usersdb = [];
@@ -71,9 +73,21 @@ export const useUserStore = defineStore('users', () => {
     }
   };
 
+  const selectEditableUser = (user) => {
+    userToEdit.value = user;
+  };
+
   onMounted(() => {
     getUsers();
   });
 
-  return { users: computed(() => users), getUsers, addUser, deleteUser, updateUser };
+  return {
+    users: computed(() => users),
+    userToEdit: computed(() => userToEdit),
+    getUsers,
+    addUser,
+    deleteUser,
+    updateUser,
+    selectEditableUser,
+  };
 });

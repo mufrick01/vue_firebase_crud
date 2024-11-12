@@ -6,7 +6,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'users',
       component: UserView,
+    },
+    {
+      path: '/user-edit/:id',
+      name: 'edit',
+      component: () => import('@/views/EditUserView.vue'),
     },
   ],
 });

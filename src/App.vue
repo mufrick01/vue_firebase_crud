@@ -1,16 +1,8 @@
 <template>
-  <div>
-    <h1>Hola Mundo</h1>
-    <blockquote>- Mufrick</blockquote>
-  </div>
-  <RouterView />
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+  </nav>
+  <main>
+    <RouterView />
+  </main>
 </template>
-
-<script setup>
-
-// import { RouterLink, RouterView } from 'vue-router'
-
-
-
-</script>
-<style scoped></style>
