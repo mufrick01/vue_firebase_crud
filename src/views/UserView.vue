@@ -1,5 +1,5 @@
 <template>
-  <section class="row m-5">
+  <section class="row  m-0 m-lg-5">
     <form @submit.prevent="newUser" class="col-12 col-lg-4">
       <h3>Add User Zone</h3>
       <div class="mb-3">
